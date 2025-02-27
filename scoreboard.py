@@ -18,7 +18,6 @@ class Scoreboard(Turtle):
     def update_score(self):
         self.clear()
         self.score += 1
-
         self.display_score()
 
     def reset(self):
