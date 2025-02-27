@@ -18,6 +18,13 @@ class Snake:
         for position in STARTING_POS:
             self.add_tail(position)
 
+    def reset(self):
+        for part in self.full_snake:
+            part.goto(1000, 1000)
+        self.full_snake.clear()
+        self.create_snake()
+        self.head = self.full_snake[0]
+
     def add_tail(self, position):
         new_square = Turtle(shape="circle")
         new_square.color("white")
